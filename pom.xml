@@ -25,6 +25,12 @@
         <lombok.version>1.18.10</lombok.version>
     </properties>
 
+    <scm>
+        <url>https://github.com/hydrz/dipper</url>
+        <connection>scm:git:git@github.com:hydrz/dipper.git</connection>
+        <developerConnection>scm:git:git@github.com:hydrz/dipper.git</developerConnection>
+    </scm>
+
     <dependencies>
         <!-- 全局单元测试 -->
         <dependency>
@@ -52,14 +58,17 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
-    <scm>
-        <url>https://github.com/hydrz/dipper</url>
-        <connection>scm:git:git@github.com:hydrz/dipper.git</connection>
-        <developerConnection>scm:git:git@github.com:hydrz/dipper.git</developerConnection>
-    </scm>
 
     <profiles>
         <profile>
@@ -129,15 +138,6 @@
                             <serverId>oss</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <version>2.5.3</version>
-                        <configuration>
-                            <tagNameFormat>@{project.version}</tagNameFormat>
-                            <autoVersionSubmodules>true</autoVersionSubmodules>
                         </configuration>
                     </plugin>
                 </plugins>
