@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>dipper-parent</artifactId>
         <groupId>cn.hydrz</groupId>
@@ -12,8 +13,27 @@
     <description>所有模块的打包汇总，最终形式为一个jar包</description>
 
     <dependencies>
-
+        <dependency>
+            <groupId>cn.hydrz</groupId>
+            <artifactId>dipper-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hydrz</groupId>
+            <artifactId>dipper-map</artifactId>
+        </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hydrz</groupId>
+                <artifactId>dipper-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

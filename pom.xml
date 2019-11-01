@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.hydrz</groupId>
@@ -13,6 +14,8 @@
     <modules>
         <module>dipper-bom</module>
         <module>dipper-all</module>
+        <module>dipper-map</module>
+        <module>dipper-api</module>
     </modules>
 
     <properties>
@@ -27,8 +30,8 @@
         <url>https://github.com/hydrz/dipper</url>
         <connection>scm:git:git@github.com:hydrz/dipper.git</connection>
         <developerConnection>scm:git:git@github.com:hydrz/dipper.git</developerConnection>
-      <tag>1.0.0</tag>
-  </scm>
+        <tag>1.0.0</tag>
+    </scm>
 
     <dependencies>
         <!-- 全局单元测试 -->
@@ -42,7 +45,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -53,6 +56,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
+                    <skip>true</skip>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
