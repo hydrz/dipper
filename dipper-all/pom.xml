@@ -46,6 +46,7 @@
                         <configuration>
                             <!-- 创建源码jar -->
                             <createSourcesJar>true</createSourcesJar>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
                                     <include>${project.groupId}:*:*</include>
