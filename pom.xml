@@ -14,7 +14,6 @@
     <modules>
         <module>dipper-bom</module>
         <module>dipper-all</module>
-        <module>dipper-map</module>
         <module>dipper-api</module>
     </modules>
 

@@ -88,7 +88,7 @@ public class R<T> implements Serializable {
      *
      * @param msg 消息
      * @param <T> 任意Bean
-     * @return
+     * @return 返回值
      */
     public static <T> R<T> ok(String msg) {
         return ok(null, msg);
