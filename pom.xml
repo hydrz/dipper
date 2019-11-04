@@ -4,7 +4,7 @@
 
     <groupId>cn.hydrz</groupId>
     <artifactId>dipper-parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>dipper</name>
     <description>personal core libraries for Java</description>
     <url>https://github.com/hydrz/dipper</url>
@@ -36,7 +36,7 @@
         <url>https://github.com/hydrz/dipper</url>
         <connection>scm:git:git@github.com:hydrz/dipper.git</connection>
         <developerConnection>scm:git:git@github.com:hydrz/dipper.git</developerConnection>
-        <tag>1.0.1</tag>
+        <tag>1.0.0</tag>
     </scm>
 
     <issueManagement>
