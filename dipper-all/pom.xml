@@ -17,10 +17,6 @@
             <groupId>cn.hydrz</groupId>
             <artifactId>dipper-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>cn.hydrz</groupId>
-            <artifactId>dipper-map</artifactId>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>

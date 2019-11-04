@@ -21,11 +21,6 @@
                 <artifactId>dipper-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.hydrz</groupId>
-                <artifactId>dipper-map</artifactId>
-                <version>${project.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
